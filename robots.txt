@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parkerrl-91.github.io/localchronicle-site/sitemap.xml
