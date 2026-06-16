@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Download — Local Meeting Manager for macOS | Free Trial</title>
+  <meta name="description" content="Download Local Meeting Manager for macOS from GitHub Releases. Install the disk image, open it once with a right-click, grant Microphone and Screen Recording, and record your first meeting. Requires macOS 14.4 or newer, Apple Silicon recommended." />
+  <link rel="canonical" href="https://parkerrl-91.github.io/localchronicle-site/download.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://parkerrl-91.github.io/localchronicle-site/download.html" />
+  <meta property="og:title" content="Download Local Meeting Manager for macOS" />
+  <meta property="og:description" content="Install from a disk image, grant Microphone and Screen Recording, and record your first meeting on your own Mac. macOS 14.4 or newer." />
+  <meta property="og:image" content="https://parkerrl-91.github.io/localchronicle-site/og-image.png" />
+  <meta property="og:site_name" content="Local Meeting Manager" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://parkerrl-91.github.io/localchronicle-site/" },
+      { "@type": "ListItem", "position": 2, "name": "Download", "item": "https://parkerrl-91.github.io/localchronicle-site/download.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="currentColor" opacity=".15"/><path d="M5 7h10M5 10h8M5 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Local Meeting Manager
+  </a>
+  <div class="nav-links">
+    <a href="features.html">Features</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="download.html" class="btn-nav">Download</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>You can download Local Meeting Manager and record your first meeting in a few minutes.</h1>
+  <p>The app installs from a downloadable disk image, so there is no account to create and nothing to sign up for. The steps below cover the first launch and the permissions the app asks for.</p>
+  <div class="hero-actions" style="margin-top:32px; justify-content:center;">
+    <a href="https://github.com/ParkerRL-91/Meeting-Manager/releases/latest" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M5 7l3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Download the latest release from GitHub
+    </a>
+  </div>
+  <p class="hero-note" style="margin:16px auto 0;">The download is free, and you can record your first ten meetings before you decide to buy.</p>
+</header>
+
+<!-- Install steps -->
+<section style="padding-top:48px;">
+  <div class="container">
+    <div class="section-label">Installing the app</div>
+    <h2 class="section-title">You install the app from a disk image and open it once with a right-click.</h2>
+    <p class="section-sub">The first launch shows a Gatekeeper warning because the app is not yet notarized, and the right-click step clears it for good.</p>
+    <ul class="numbered">
+      <li><span class="step-copy"><strong>Download the latest disk image from GitHub Releases.</strong> Grab the most recent .dmg from the releases page and open it.</span></li>
+      <li><span class="step-copy"><strong>Drag the app into your Applications folder.</strong> Move Local Meeting Manager out of the disk image and into Applications the usual way.</span></li>
+      <li><span class="step-copy"><strong>Open it once with a right-click.</strong> Because the app is not yet notarized with an Apple Developer ID, right-click it and choose Open the first time, then confirm; you will not see the warning again.</span></li>
+      <li><span class="step-copy"><strong>Grant the permissions it asks for.</strong> Allow Microphone and Screen Recording so it can capture the call, and optionally Calendar, Reminders, and Contacts for prep and follow-ups.</span></li>
+      <li><span class="step-copy"><strong>Record your first meeting.</strong> Start a call, let the app capture it, and read the summary it writes on your Mac when you stop.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Requirements & permissions -->
+<section style="padding-top:24px;">
+  <div class="container">
+    <div class="section-label">Requirements</div>
+    <h2 class="section-title">Local Meeting Manager runs on a modern Mac and asks only for the permissions it uses.</h2>
+    <div class="flow-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="flow-col">
+        <h3>What you need to run it</h3>
+        <p class="flow-sub">The app leans on Apple Silicon for transcription and the local model.</p>
+        <ul class="flow-list flow-stay">
+          <li>It runs on macOS 14.4 or newer.</li>
+          <li>Apple Silicon is strongly recommended, because transcription and the local model lean on the Neural Engine.</li>
+          <li>Intel Macs work with the smaller transcription models.</li>
+          <li>The WhisperKit model is about 1.5 GB and downloads once, while recordings and the database grow with use.</li>
+        </ul>
+      </div>
+      <div class="flow-col">
+        <h3>The permissions it asks for, and why</h3>
+        <p class="flow-sub">Each request maps to something the app actually does.</p>
+        <ul class="flow-list flow-stay">
+          <li>Microphone lets the app record your own voice.</li>
+          <li>Screen Recording lets it capture system audio and read the call-window title.</li>
+          <li>Calendar lets it show your meetings and the people attending them.</li>
+          <li>Reminders and Contacts are optional, for pushing action items and importing names.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:48px;">
+      <h2>Updates are free, and you download them yourself.</h2>
+      <p>The app does not auto-update and makes no update-check calls. When a new version ships, you download it from the same GitHub Releases page and replace the app, and your data stays exactly where it is. Every update is included in the one-time price.</p>
+
+      <h2>Your data lives in one folder you can back up.</h2>
+      <p>Local Meeting Manager keeps a single SQLite database and an audio folder under <code class="inline">~/Library/Application Support/</code>, and your API keys live in the macOS Keychain rather than in a file. Backing everything up is as simple as copying that folder to another disk.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px;">
+  <div class="container">
+    <div class="cta-band">
+      <h2>You can start recording on your own Mac as soon as the download finishes.</h2>
+      <p>Try Local Meeting Manager on your next ten meetings, then keep it with a one-time $9.99 purchase when you are ready.</p>
+      <div class="cta-actions">
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/releases/latest" class="btn btn-primary">Download the latest release from GitHub</a>
+        <a href="pricing.html" class="btn btn-ghost">See the pricing and the AI options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="#4F6CEF" opacity=".2"/><path d="M5 7h10M5 10h8M5 13h6" stroke="#8EA7FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Local Meeting Manager
+      </div>
+      <p>A native macOS app that records, transcribes, and summarizes your meetings on your own Mac.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="pricing.html">Pricing and AI options</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager">GitHub repository</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/releases">Releases and changelog</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/tree/main/docs/user">Documentation</a>
+        <a href="mailto:parker@phenotips.com">Contact the maker</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    Local Meeting Manager runs on macOS 14.4 or newer, and your meeting audio, transcripts, and voice profiles stay on your Mac by default. © 2026 Local Meeting Manager.
+  </div>
+</footer>
+
+</body>
+</html>
