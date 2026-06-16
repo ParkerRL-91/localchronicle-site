@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FAQ — Local Meeting Manager | Privacy, Cost, and How It Works</title>
+  <meta name="description" content="Answers about Local Meeting Manager: whether a bot joins your call, where your data is stored, using it offline, the one-time $9.99 price and bring-your-own AI, supported meeting apps, the first-launch Gatekeeper warning, and how it compares to cloud notetakers." />
+  <link rel="canonical" href="https://parkerrl-91.github.io/localchronicle-site/faq.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://parkerrl-91.github.io/localchronicle-site/faq.html" />
+  <meta property="og:title" content="FAQ — Local Meeting Manager" />
+  <meta property="og:description" content="Whether a bot joins your call, where your data lives, offline use, the price and AI options, and how it compares to cloud notetakers." />
+  <meta property="og:image" content="https://parkerrl-91.github.io/localchronicle-site/og-image.png" />
+  <meta property="og:site_name" content="Local Meeting Manager" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://parkerrl-91.github.io/localchronicle-site/" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://parkerrl-91.github.io/localchronicle-site/faq.html" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does a bot join my meeting?", "acceptedAnswer": { "@type": "Answer", "text": "No. Local Meeting Manager records your Mac's own microphone and system audio directly, so no third-party attendee ever appears in the call. The other participants see the same meeting they always would." } },
+        { "@type": "Question", "name": "Where is my meeting data stored?", "acceptedAnswer": { "@type": "Answer", "text": "On your Mac. Recordings sit in a local audio folder, transcripts and notes live in a local SQLite database, and any API keys are kept in the macOS Keychain. Nothing is uploaded unless you turn on a cloud AI feature." } },
+        { "@type": "Question", "name": "Can I use Local Meeting Manager fully offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you use the local model. Recording and on-device transcription never need the internet, and the local AI runs over localhost, so summaries and chat work with no connection at all." } },
+        { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "The app is a one-time $9.99 purchase, and you can record your first ten meetings free before you buy. The AI is separate and yours to choose: a free local model costs nothing to run, while your own Claude API key runs about five to eight cents for a 30-minute meeting." } },
+        { "@type": "Question", "name": "Do I need an account to use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up, no login, and no Local Meeting Manager server, so you download the app and start recording." } },
+        { "@type": "Question", "name": "Which meeting apps does it work with?", "acceptedAnswer": { "@type": "Answer", "text": "It works with Zoom, Google Meet, Microsoft Teams, FaceTime, and others. Detection covers both native apps and browser tabs, and you can always start an ad-hoc recording when a call is not on your calendar." } },
+        { "@type": "Question", "name": "Why does macOS warn me on first launch?", "acceptedAnswer": { "@type": "Answer", "text": "The app is not yet notarized with an Apple Developer ID, so macOS shows a Gatekeeper warning the first time. Right-click the app and choose Open once, confirm, and you will not see the warning again." } },
+        { "@type": "Question", "name": "Do I have to send my meetings to the cloud?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can run a local model so that no meeting content ever leaves your Mac. A cloud summary happens only if you add your own Claude API key and choose the cloud option, and even then only the relevant transcript slice and your prompt are sent." } },
+        { "@type": "Question", "name": "Is there a Windows or iOS version?", "acceptedAnswer": { "@type": "Answer", "text": "No. Local Meeting Manager is a native macOS app, and there is no iOS, Windows, web, or Linux version today." } },
+        { "@type": "Question", "name": "Does it work with Outlook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use Apple Calendar as the source and your Outlook for Mac events appear through macOS, alongside iCloud and other calendars." } },
+        { "@type": "Question", "name": "How accurate is speaker identification?", "acceptedAnswer": { "@type": "Answer", "text": "It improves as it learns. The first time a new person speaks the app may guess, but once you rename them their voice is remembered, so the next meeting is labeled correctly on its own." } },
+        { "@type": "Question", "name": "How is it different from cloud notetakers like Otter, Fireflies, or Granola?", "acceptedAnswer": { "@type": "Answer", "text": "Those tools are cloud services that typically send a bot into your call, store your audio and transcripts on their servers, and bill a subscription. Local Meeting Manager captures the call from your own Mac, keeps the audio and transcripts on your device, needs no account, and is a one-time purchase. Confirm each competitor's current details on their own page, since they change often." } }
+      ]
+    }
+  ]
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="currentColor" opacity=".15"/><path d="M5 7h10M5 10h8M5 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Local Meeting Manager
+  </a>
+  <div class="nav-links">
+    <a href="features.html">Features</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="download.html" class="btn-nav">Download</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>Here are the questions people ask before they download Local Meeting Manager.</h1>
+  <p>If something you need is not answered below, you can reach the maker directly by email and ask.</p>
+</header>
+
+<section style="padding-top:48px;">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Does a bot join my meeting?</div>
+        <div class="faq-a">No. Local Meeting Manager records your Mac's own microphone and system audio directly, so no third-party attendee ever appears in the call. The other participants see the same meeting they always would.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where is my meeting data stored?</div>
+        <div class="faq-a">On your Mac. Recordings sit in a local audio folder, transcripts and notes live in a local SQLite database, and any API keys are kept in the macOS Keychain. Nothing is uploaded unless you turn on a cloud AI feature.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use Local Meeting Manager fully offline?</div>
+        <div class="faq-a">Yes, if you use the local model. Recording and on-device transcription never need the internet, and the local AI runs over localhost, so summaries and chat work with no connection at all.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does it cost?</div>
+        <div class="faq-a">The app is a one-time $9.99 purchase, and you can record your first ten meetings free before you buy. The AI is separate and yours to choose: a free local model costs nothing to run, while your own Claude API key runs about five to eight cents for a 30-minute meeting.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need an account to use it?</div>
+        <div class="faq-a">No. There is no sign-up, no login, and no Local Meeting Manager server, so you download the app and start recording.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which meeting apps does it work with?</div>
+        <div class="faq-a">It works with Zoom, Google Meet, Microsoft Teams, FaceTime, and others. Detection covers both native apps and browser tabs, and you can always start an ad-hoc recording when a call is not on your calendar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why does macOS warn me on first launch?</div>
+        <div class="faq-a">The app is not yet notarized with an Apple Developer ID, so macOS shows a Gatekeeper warning the first time. Right-click the app and choose Open once, confirm, and you will not see the warning again.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I have to send my meetings to the cloud?</div>
+        <div class="faq-a">No. You can run a local model so that no meeting content ever leaves your Mac. A cloud summary happens only if you add your own Claude API key and choose the cloud option, and even then only the relevant transcript slice and your prompt are sent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a Windows or iOS version?</div>
+        <div class="faq-a">No. Local Meeting Manager is a native macOS app, and there is no iOS, Windows, web, or Linux version today.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does it work with Outlook?</div>
+        <div class="faq-a">Yes. Use Apple Calendar as the source and your Outlook for Mac events appear through macOS, alongside iCloud and other calendars.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How accurate is speaker identification?</div>
+        <div class="faq-a">It improves as it learns. The first time a new person speaks the app may guess, but once you rename them their voice is remembered, so the next meeting is labeled correctly on its own.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is it different from cloud notetakers like Otter, Fireflies, or Granola?</div>
+        <div class="faq-a">Those tools are cloud services that typically send a bot into your call, store your audio and transcripts on their servers, and bill a subscription. Local Meeting Manager captures the call from your own Mac, keeps the audio and transcripts on your device, needs no account, and is a one-time purchase. Confirm each competitor's current details on their own page, since they change often.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px;">
+  <div class="container">
+    <div class="cta-band">
+      <h2>You can answer the rest of your questions by recording a meeting yourself.</h2>
+      <p>The first ten meetings are free, so you can see the transcription, the summary, and the speaker labels on your own calls before you buy.</p>
+      <div class="cta-actions">
+        <a href="download.html" class="btn btn-primary">Download the free ten-meeting trial</a>
+        <a href="privacy.html" class="btn btn-ghost">Read how your data stays on your Mac</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="#4F6CEF" opacity=".2"/><path d="M5 7h10M5 10h8M5 13h6" stroke="#8EA7FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Local Meeting Manager
+      </div>
+      <p>A native macOS app that records, transcribes, and summarizes your meetings on your own Mac.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="pricing.html">Pricing and AI options</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager">GitHub repository</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/releases">Releases and changelog</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/tree/main/docs/user">Documentation</a>
+        <a href="mailto:parker@phenotips.com">Contact the maker</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    Local Meeting Manager runs on macOS 14.4 or newer, and your meeting audio, transcripts, and voice profiles stay on your Mac by default. © 2026 Local Meeting Manager.
+  </div>
+</footer>
+
+</body>
+</html>

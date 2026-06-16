@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy — Local Meeting Manager | What Stays on Your Mac</title>
+  <meta name="description" content="Your meeting audio, transcripts, and voice profiles stay on your Mac by default. See exactly what stays on your device, what leaves only when you enable it, and what Local Meeting Manager never does — including how to verify the network behavior yourself." />
+  <link rel="canonical" href="https://parkerrl-91.github.io/localchronicle-site/privacy.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://parkerrl-91.github.io/localchronicle-site/privacy.html" />
+  <meta property="og:title" content="Privacy — Local Meeting Manager" />
+  <meta property="og:description" content="Your meeting audio, transcripts, and voice profiles stay on your Mac by default, and you can run the AI locally so nothing leaves your machine at all." />
+  <meta property="og:image" content="https://parkerrl-91.github.io/localchronicle-site/og-image.png" />
+  <meta property="og:site_name" content="Local Meeting Manager" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://parkerrl-91.github.io/localchronicle-site/" },
+      { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://parkerrl-91.github.io/localchronicle-site/privacy.html" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="currentColor" opacity=".15"/><path d="M5 7h10M5 10h8M5 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Local Meeting Manager
+  </a>
+  <div class="nav-links">
+    <a href="features.html">Features</a>
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="download.html" class="btn-nav">Download</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>Your meeting audio, transcripts, and voice profiles stay on your Mac by default.</h1>
+  <p>Local Meeting Manager treats meeting content as sensitive from the first recording. Here is exactly what stays on your Mac, what leaves only when you switch it on, and what the app never does.</p>
+</header>
+
+<!-- Data-flow columns -->
+<section style="padding-top:48px;">
+  <div class="container">
+    <div class="flow-grid">
+      <div class="flow-col col-stay">
+        <h3>What always stays on your Mac</h3>
+        <p class="flow-sub">These never leave your device, whatever AI option you pick.</p>
+        <ul class="flow-list flow-stay">
+          <li>Your audio recordings, the .wav files, stay in a local folder.</li>
+          <li>Your transcripts stay local, because speech recognition runs on your Mac.</li>
+          <li>The voice fingerprints used for speaker identification stay on the device.</li>
+          <li>Your notes, calendar data, and the people directory stay local.</li>
+          <li>The knowledge-base index of your own documents stays on your Mac.</li>
+        </ul>
+      </div>
+      <div class="flow-col col-opt">
+        <h3>What leaves only when you turn it on</h3>
+        <p class="flow-sub">Each of these is off until you enable it, and you choose what is shared.</p>
+        <ul class="flow-list flow-opt">
+          <li>Cloud AI sends the relevant transcript slice and your prompt to Anthropic, but only if you add a Claude API key.</li>
+          <li>Local AI sends nothing off the machine, because the model runs over localhost.</li>
+          <li>Google Calendar gives the app read-only access to the events you authorize.</li>
+          <li>Apple Calendar and Contacts are read-only, and Reminders is written to only for the items you push.</li>
+          <li>Apollo.io sends an attendee's email address to look up a title and employer, and never any meeting content.</li>
+        </ul>
+      </div>
+      <div class="flow-col col-never">
+        <h3>What the app never does</h3>
+        <p class="flow-sub">These are not settings to find; the app simply does not do them.</p>
+        <ul class="flow-list flow-never">
+          <li>It sends no telemetry, with no analytics SDK and no usage tracking.</li>
+          <li>It makes no update-check calls, because updates are manual downloads.</li>
+          <li>It creates no account, because there is no Local Meeting Manager server.</li>
+          <li>It never uploads your raw audio or your voice fingerprints to anyone.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail prose -->
+<section style="padding-top:24px;">
+  <div class="container">
+    <div class="prose">
+      <h2>Cloud AI leaves your Mac only when you add a key, and only the text it needs.</h2>
+      <p>When you add a Claude API key and trigger a summary, an attribution pass, a brief, a follow-up email, action-item extraction, or chat, the app sends the relevant slice of the cleaned transcript plus your prompt to Anthropic over HTTPS. Your raw audio and your voice fingerprints are never part of that request. If you would rather send nothing at all, the same features run against a local model over localhost, so the content never leaves the machine.</p>
+
+      <h2>You can verify the network behavior yourself.</h2>
+      <p>You do not have to take this on trust. With the app open, run the command below in Terminal and you will see only the AI and calendar providers you configured, and nothing else.</p>
+      <div class="note">
+        <code class="inline">sudo lsof -i -P -n | grep -i meeting</code>
+      </div>
+
+      <h2>Your data lives in one place that you can back up by copying a folder.</h2>
+      <p>Local Meeting Manager keeps a single SQLite database and an audio folder under <code class="inline">~/Library/Application Support/</code> on your Mac, and any API keys live in the macOS Keychain rather than in a file. There is no companion service and no cloud account, so backing everything up is as simple as copying that folder. Because the record lives on your machine, there is no server that could be switched off and take your meetings with it.</p>
+    </div>
+
+    <div class="stat-callout">
+      <p>You can run Local Meeting Manager fully offline with the local model, so <strong>recording, transcription, and AI summaries can all happen without an internet connection</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px;">
+  <div class="container">
+    <div class="cta-band">
+      <h2>You can keep your meeting record on the one machine that made it.</h2>
+      <p>Download the free trial, record a call, and check the network behavior for yourself before you decide to buy.</p>
+      <div class="cta-actions">
+        <a href="download.html" class="btn btn-primary">Download the free ten-meeting trial</a>
+        <a href="pricing.html" class="btn btn-ghost">Compare the local and cloud AI options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" fill="#4F6CEF" opacity=".2"/><path d="M5 7h10M5 10h8M5 13h6" stroke="#8EA7FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Local Meeting Manager
+      </div>
+      <p>A native macOS app that records, transcribes, and summarizes your meetings on your own Mac.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="pricing.html">Pricing and AI options</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager">GitHub repository</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/releases">Releases and changelog</a>
+        <a href="https://github.com/ParkerRL-91/Meeting-Manager/tree/main/docs/user">Documentation</a>
+        <a href="mailto:parker@phenotips.com">Contact the maker</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    Local Meeting Manager runs on macOS 14.4 or newer, and your meeting audio, transcripts, and voice profiles stay on your Mac by default. © 2026 Local Meeting Manager.
+  </div>
+</footer>
+
+</body>
+</html>
